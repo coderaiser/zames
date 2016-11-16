@@ -1,0 +1,55 @@
+{
+  "name": "zames",
+  "version": "1.0.0",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
+  "description": "converts callback-based functions to Promises and apply currying to arguments",
+  "homepage": "http://github.com/coderaiser/zames",
+  "main": "lib/zames.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/zames.git"
+  },
+  "keywords": [
+    "curry",
+    "promise",
+    "currify",
+    "promisify"
+  ],
+  "scripts": {
+    "test": "tape test/*.js",
+    "watcher": "nodemon -w test -w lib --exec",
+    "watch:test": "npm run watcher -- npm test",
+    "watch:coverage": "npm run watcher -- npm run coverage",
+    "lint": "eslint lib test",
+    "build": "redrun clean init 6to5 legacy:* bundle bundle:es6 minify",
+    "init": "mkdirp dist legacy",
+    "minify": "minify dist/zames.js > dist/zames.min.js",
+    "wisdom": "npm run build",
+    "clean": "rimraf legacy dist",
+    "bundle:base": "browserify -s zames --ng false",
+    "bundle": "npm run bundle:base -- -r ./legacy/lib/zames.js:zames ./legacy/lib/zames.js -o dist/zames.js",
+    "bundle:es6:base": "npm run bundle:base -- -r ./lib/zames.js:zames ./lib/zames.js",
+    "bundle:es6": "npm run bundle:es6:base -- -o dist/zames.es6.js",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "6to5": "buble lib -o legacy",
+    "legacy:index": "echo \"module.exports = require('./lib/zames');\" > legacy/index.js"
+  },
+  "dependencies": {
+    "currify": "^1.0.0",
+    "es6-promisify": "^5.0.0",
+    "mkdirp": "^0.5.1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "buble": "^0.14.2",
+    "coveralls": "^2.11.9",
+    "eslint": "^3.10.2",
+    "minify": "^2.0.5",
+    "nodemon": "^1.11.0",
+    "nyc": "^9.0.1",
+    "redrun": "^5.0.1",
+    "tape": "^4.5.1"
+  }
+}

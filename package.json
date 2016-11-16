@@ -13,7 +13,10 @@
     "curry",
     "promise",
     "currify",
-    "promisify"
+    "promisify",
+    "function",
+    "arguments",
+    "callback"
   ],
   "scripts": {
     "test": "tape test/*.js",

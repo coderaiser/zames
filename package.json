@@ -35,7 +35,7 @@
     "bundle:es6": "npm run bundle:es6:base -- -o dist/zames.es6.js",
     "coverage": "nyc npm test",
     "report": "nyc report --reporter=text-lcov | coveralls",
-    "6to5": "buble lib -o legacy",
+    "6to5": "buble lib -o legacy/lib",
     "legacy:index": "echo \"module.exports = require('./lib/zames');\" > legacy/index.js"
   },
   "dependencies": {

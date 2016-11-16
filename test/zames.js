@@ -9,6 +9,7 @@ test('zames: arguments: no', (t) => {
 });
 
 test('zames: arguments: fn: count', (t) => {
+    /*eslint no-unused-vars: 0 */
     const fn = () => zames((a, b, c, d, e) =>{});
     
     t.throws(fn, /fn takes to much arguments, up to 4 supported/, 'should throw when to much arguments');

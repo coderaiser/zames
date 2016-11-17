@@ -88,3 +88,20 @@ test('zames: promisify + currify: 3 arguments: rejects', (t) => {
         });
 });
 
+test('zames: arguments: context', (t) => {
+    const ctx = {
+        name: 'error',
+        log: function(a, b, fn) {
+            fn(Error(this.name));
+        }
+    };
+    
+    const promise = zames(ctx.log, ctx);
+    
+    promise('hello', 'world', '!')
+        .catch((e) => {
+            t.equal(e.message, 'error', 'should reject using context');
+            t.end();
+        });
+});
+

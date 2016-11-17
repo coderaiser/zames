@@ -8,7 +8,14 @@
 
 `npm i zames --save`
 
-## Hot to use?
+## API
+
+### zames(fn [,ctx])
+
+- `fn` - function
+- `ctx` - context
+
+`zames` can take just a `function`:
 
 ```js
 const zames = require('zames');
@@ -17,9 +24,33 @@ const promise = zames((a, b, fn) => {
     fn(null, a + b);
 });
 
-promise.then((a) => {
+promise('hello ', 'world').then((a) => {
     console.log(a);
+    // output
+    'hello world';
 });
+
+```
+
+`zames` could be used with `ctx` as well:
+
+```js
+const ctx = {
+    error: 'hello',
+    log: function(a, b, fn) {
+        fn(this.error);
+    }
+}
+
+conxt withContext = zames(ctx.log, ctx);
+
+withContext(1, 2)
+    .catch((e) => {
+        console.error(e.message);
+        // output
+        'hello';
+    });
+
 ```
 
 ## Environments

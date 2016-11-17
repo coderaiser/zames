@@ -42,7 +42,7 @@ const ctx = {
     }
 }
 
-conxt withContext = zames(ctx.log, ctx);
+const withContext = zames(ctx.log, ctx);
 
 withContext(1, 2)
     .catch((e) => {

@@ -1,6 +1,6 @@
 {
   "name": "zames",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "converts callback-based functions to Promises and apply currying to arguments",
   "homepage": "http://github.com/coderaiser/zames",

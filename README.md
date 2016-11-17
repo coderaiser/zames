@@ -32,7 +32,7 @@ promise('hello ', 'world').then((a) => {
 
 ```
 
-`zames` could be used with `ctx` as well:
+Or could be used with `ctx` as well:
 
 ```js
 const ctx = {

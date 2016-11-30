@@ -24,7 +24,9 @@ const promise = zames((a, b, fn) => {
     fn(null, a + b);
 });
 
-promise('hello ', 'world').then((a) => {
+const add = promise('hello ');
+
+add('world').then((a) => {
     console.log(a);
     // output
     'hello world';

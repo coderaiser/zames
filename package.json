@@ -46,7 +46,7 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^13.0.0",
-    "buble": "^0.14.2",
+    "buble": "^0.15.1",
     "coveralls": "^2.11.9",
     "eslint": "^3.10.2",
     "minify": "^2.0.5",

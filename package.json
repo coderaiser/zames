@@ -40,8 +40,7 @@
   },
   "dependencies": {
     "currify": "^2.0.0",
-    "es6-promisify": "^5.0.0",
-    "mkdirp": "^0.5.1"
+    "es6-promisify": "^5.0.0"
   },
   "license": "MIT",
   "devDependencies": {
@@ -50,6 +49,7 @@
     "coveralls": "^2.11.9",
     "eslint": "^3.10.2",
     "minify": "^2.0.5",
+    "mkdirp": "^0.5.1",
     "nodemon": "^1.11.0",
     "nyc": "^10.0.0",
     "redrun": "^5.0.1",

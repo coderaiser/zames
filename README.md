@@ -67,6 +67,8 @@ var zames = require('zames/legacy');
 
 - [currify](https://github.com/coderaiser/currify "currify") - translate the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single or more arguments.
 
+- [fullstore](https://github.com/coderaiser/fullstore "fullstore") - functional variables.
+
 - [wraptile](https://github.com/coderaiser/wraptile "wraptile") - translate the evaluation of a function that takes multiple arguments into evaluating a sequence of 2 functions, each with a any count of arguments.
 
 ## License

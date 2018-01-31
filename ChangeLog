@@ -1,3 +1,18 @@
+2018.01.31, v1.1.3
+
+feature:
+- (package) es6-promisify v6.0.0
+- (package) browserify v15.2.0
+- (package) buble v0.18.0
+- (package) buble v0.17.0
+- (package) coveralls v3.0.0
+- (package) buble v0.16.0
+- (package) minify v3.0.0
+- (package) nyc v11.0.2
+- (package) eslint v4.0.0
+- (package) browserify v14.0.0
+
+
 2016.12.17, v1.1.2
 
 feature:

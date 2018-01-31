@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "currify": "^2.0.0",
-    "es6-promisify": "^5.0.0"
+    "es6-promisify": "^6.0.0"
   },
   "license": "MIT",
   "devDependencies": {

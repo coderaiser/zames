@@ -3,7 +3,7 @@ npm-debug.log
 .nyc_output
 
 legacy
-dist
+yarn-error.log
 
 *.swp
 

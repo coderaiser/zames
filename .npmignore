@@ -1,5 +1,5 @@
-dist
 test
+yarn-error.log
 .*
 
 *.swp

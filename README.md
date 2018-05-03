@@ -34,7 +34,7 @@ add('world').then((a) => {
 
 ```
 
-Or could be used with `ctx` as well:
+Or can be used with `ctx` as well:
 
 ```js
 const ctx = {
@@ -57,7 +57,7 @@ withContext(1, 2)
 
 ## Environments
 
-In old `node.js` environments that not fully supports `es2015`, `zames` could be used with:
+In old `node.js` environments that not fully supports `es2015`, `zames` can be used with:
 
 ```js
 var zames = require('zames/legacy');

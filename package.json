@@ -37,7 +37,7 @@
     "legacy:index": "echo \"module.exports = require('./lib/zames');\" > legacy/index.js"
   },
   "dependencies": {
-    "currify": "^2.0.0",
+    "currify": "^3.0.0",
     "es6-promisify": "^6.0.0"
   },
   "license": "MIT",

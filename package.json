@@ -33,7 +33,7 @@
     "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
-    "currify": "^3.0.0",
+    "currify": "^4.0.0",
     "es6-promisify": "^6.0.0"
   },
   "license": "MIT",

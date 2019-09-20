@@ -1,0 +1,11 @@
+{
+    "match": {
+        "test": {
+            "remove-unused-variables": ["on", {
+                "exclude": [
+                    "zames((a, b, c, d, e, f, g, h, i) => {})"
+                ]
+            }]
+        }
+    }
+}

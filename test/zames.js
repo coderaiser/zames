@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const zames = require('..');
 
 test('zames: arguments: no', (t) => {
@@ -9,8 +9,8 @@ test('zames: arguments: no', (t) => {
 });
 
 test('zames: arguments: fn: count', (t) => {
-    /*eslint no-unused-vars: 0 */
-    const fn = () => zames((a, b, c, d, e, f, g, h, i) =>{});
+    /*eslint no-unused-vars: "off" */
+    const fn = () => zames((a, b, c, d, e, f, g, h, i) => {});
     
     t.throws(fn, /fn takes to much arguments, up to 8 supported/, 'should throw when to much arguments');
     t.end();
@@ -125,7 +125,7 @@ test('zames: promisify + currify: 5 arguments: resolves', (t) => {
 });
 
 test('zames: promisify + currify: 5 arguments: rejects', (t) => {
-    const msg = 'error'
+    const msg = 'error';
     const promise = zames((a, b, c, d, e, fn) => {
         fn(Error(msg));
     });
@@ -150,7 +150,7 @@ test('zames: promisify + currify: 6 arguments: resolves', (t) => {
 });
 
 test('zames: promisify + currify: 6 arguments: rejects', (t) => {
-    const msg = 'error'
+    const msg = 'error';
     const promise = zames((a, b, c, d, e, f, fn) => {
         fn(Error(msg));
     });
@@ -175,7 +175,7 @@ test('zames: promisify + currify: 7 arguments: resolves', (t) => {
 });
 
 test('zames: promisify + currify: 7 arguments: rejects', (t) => {
-    const msg = 'error'
+    const msg = 'error';
     const promise = zames((a, b, c, d, e, f, g, fn) => {
         fn(Error(msg));
     });
@@ -190,9 +190,9 @@ test('zames: promisify + currify: 7 arguments: rejects', (t) => {
 test('zames: arguments: context', (t) => {
     const ctx = {
         name: 'error',
-        log: function(a, b, fn) {
+        log(a, b, fn) {
             fn(Error(this.name));
-        }
+        },
     };
     
     const promise = zames(ctx.log, ctx);

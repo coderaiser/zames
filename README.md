@@ -55,14 +55,6 @@ withContext(1, 2)
 
 ```
 
-## Environments
-
-In old `node.js` environments that not fully supports `es2015`, `zames` can be used with:
-
-```js
-var zames = require('zames/legacy');
-```
-
 ## Related
 
 - [currify](https://github.com/coderaiser/currify "currify") - translate the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single or more arguments.

@@ -19,22 +19,18 @@
     "callback"
   ],
   "scripts": {
-    "test": "tape test/*.js",
-    "coverage": "nyc npm test",
-    "lint": "eslint lib test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "build": "redrun clean 6to5 legacy:*",
-    "6to5": "babel -d legacy/lib lib",
-    "wisdom": "npm run build",
-    "clean": "rimraf legacy/*",
-    "watcher": "nodemon -w test -w lib --exec",
-    "watch:test": "npm run watcher -- npm test",
-    "watch:lint": "npm run watcher -- 'npm run lint'",
-    "watch:tape": "nodemon -w test -w lib --exec tape",
-    "watch:coverage:base": "npm run watcher -- nyc npm test",
-    "watch:coverage:tape": "npm run watcher -- nyc tape",
-    "watch:coverage": "bin/redrun.js watch:coverage:base",
-    "legacy:index": "echo \"module.exports = require('./lib/zames');\" > legacy/index.js"
+    "test": "madrun test",
+    "coverage": "madrun coverage",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "report": "madrun report",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "watch:lint": "madrun watch:lint",
+    "watch:tape": "madrun watch:tape",
+    "watch:coverage:base": "madrun watch:coverage:base",
+    "watch:coverage:tape": "madrun watch:coverage:tape",
+    "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
     "currify": "^3.0.0",
@@ -42,14 +38,14 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "coveralls": "^3.0.0",
     "eslint": "^5.6.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-putout": "^2.0.0",
+    "madrun": "^3.0.5",
     "nodemon": "^1.11.0",
     "nyc": "^14.0.0",
-    "redrun": "^7.0.0",
-    "tape": "^4.5.1"
+    "putout": "^6.1.0",
+    "supertape": "^1.2.3"
   }
 }

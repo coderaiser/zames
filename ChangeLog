@@ -1,3 +1,12 @@
+2019.09.20, v3.0.0
+
+feature:
+- (package) eslint v6.4.0
+- (package) currify v4.0.0
+- (zames) drop support of legacy
+- (package) nyc v14.0.0
+
+
 2018.10.10, v2.0.1
 
 feature:

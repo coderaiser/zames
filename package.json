@@ -36,6 +36,9 @@
     "currify": "^4.0.0",
     "es6-promisify": "^6.0.0"
   },
+  "engines": {
+    "node": ">=8"
+  },
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^3.0.0",
